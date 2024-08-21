@@ -1,0 +1,27 @@
+.logo-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-right: 100px; /* Espacio entre el logo y el navbar */
+        
+}
+
+.logo {
+    position: absolute;
+    top: 80%; /* La mitad superior del logo estará dentro del navbar */
+    transform: translateY(-35%);
+    height: 200px; /* Ajusta la altura del logo según sea necesario */
+    width: auto;
+    padding-top: 40px;
+      
+}
+
+.navbar {
+    padding-left: 120px; /* Ajusta este valor dependiendo del tamaño del logo para evitar que el contenido del navbar se superponga al logo */
+}
+.custom-navbar {
+    height: 90px; /* Ajusta la altura según sea necesario */
+    padding-top: 15px; /* Asegura que el contenido esté centrado verticalmente */
+    padding-bottom: 15px;
+}
+
