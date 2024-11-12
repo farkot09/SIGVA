@@ -19,40 +19,42 @@
 
                 <div class="col-4"></div>
                 <div class="col-4 mt-5">
-                    <form method="post" action="?page=login&action=login" >
-                        <!-- Email input -->
-                        <div data-mdb-input-init class="form-outline mb-4">
-                            <input type="email" name="email" class="form-control" />
-                            <label class="form-label" for="form2Example1">Email address</label>
-                        </div>
-
-                        <!-- Password input -->
-                        <div data-mdb-input-init class="form-outline mb-4">
-                            <input type="password" name="password" class="form-control" />
-                            <label class="form-label" for="form2Example2">Password</label>
-                        </div>
-
-                        <!-- 2 column grid layout for inline styling -->
-                        <div class="row mb-4">
-                            <div class="col d-flex justify-content-center">
-                                <!-- Checkbox -->
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
-                                    <label class="form-check-label" for="form2Example31"> Remember me </label>
+                    <form method="post" action="?page=login&action=login">
+                        <div class="card text-center border-top border-primary">
+                            <div class="card-header">
+                                <h1>SIGVA</h1>
+                            </div>
+                            <div class="card-body">
+                                <div class="m-4">
+                                    <p>Ingrese sus datos para iniciar sesion</p>
                                 </div>
-                            </div>
-
-                            <div class="col">
-                                <!-- Simple link -->
-                                <a href="#!">Forgot password?</a>
+                                <div class="input-group mb-3">
+                                    <input type="email" class="form-control" placeholder="Email" name="email">
+                                    <span class="input-group-text"><i class="bi bi-envelope-fill"></i></span>
+                                </div>
+                                <div class="input-group mb-3">
+                                    <input type="password" name="password" class="form-control" placeholder="password">
+                                    <span class="input-group-text"><i class="bi bi-lock-fill"></i></span>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                                            <label class="form-check-label" for="inlineFormCheck">
+                                                Recordar usuario
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <button type="submit" class="btn btn-primary">Login</button>
+                                    </div>
+                                </div>
+                                <a class="text-center">SIGVA 1.0</a>
                             </div>
                         </div>
-
-                        <!-- Submit button -->
-                        <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4">Sign in</button>
-
                     </form>
                 </div>
+
                 <div class="col-4"></div>
             </div>
         </div>
