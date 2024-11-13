@@ -14,7 +14,7 @@ $datos = !empty($_SESSION['datos']) ? $_SESSION['datos'] : '';
         <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
             <ul class="navbar-nav fs-5">
                 <li class="nav-item ">
-                    <a class="nav-link active" aria-current="page" href="/index.html"> <i
+                    <a class="nav-link active" aria-current="page" href="?page=contenedores&action=habilitarOperacion"> <i
                             class="bi bi-house-door-fill"></i> Inicio</a>
                 </li>
                 <li class="nav-item dropdown">
@@ -30,13 +30,8 @@ $datos = !empty($_SESSION['datos']) ? $_SESSION['datos'] : '';
                             class="bi bi-newspaper"></i> Operaciones</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false"><i
+                    <a class="nav-link " href="?page=contenedores&action=informes" ><i
                             class="bi bi-newspaper"></i> Informes</a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="/listarInformes.html">Ver informes</a></li>
-                        <li><a class="dropdown-item" href="/listarInformes.html">Generar informes</a></li>
-                        <li><a class="dropdown-item" href="/listarInformes.html">Descargar Informes</a></li>
-                    </ul>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link" href="?page=usuarios"><i class="bi bi-person-fill"></i> Administrar Usuarios</a>

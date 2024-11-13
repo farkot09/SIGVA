@@ -28,11 +28,12 @@
                             <div class="bd-example m-0 border-0">
 
                                 <form method="post" action="?page=bls&action=crear">
-                                    <div class="mb-3">    
-                                    <label class="form-label">Contenedor_id</label>                                    
-                                        <input name="contenedor_id" value="<?php echo $idContenedor ?>" readonly type="text" class="form-control bg-secondary">
+                                    <div class="mb-3">
+                                        <label class="form-label">Contenedor_id</label>
+                                        <input name="contenedor_id" value="<?php echo $idContenedor ?>" readonly
+                                            type="text" class="form-control bg-secondary">
                                     </div>
-                                    
+
                                     <div class="mb-3">
                                         <label class="form-label">numero_bl</label>
                                         <input name="numero_bl" type="text" class="form-control">
@@ -80,7 +81,7 @@
                                                 <td><?php echo $bl['importador']; ?></td>
                                                 <td><?php echo $bl['cantidad']; ?></td>
                                                 <td><?php echo $bl['peso']; ?></td>
-                                                <td>-</td>
+                                                <td><a href="?page=bls&action=eliminar&id=<?php echo $bl['bl_id'] ?>" type="button" class="btn btn-danger"> <i class="bi bi-trash"></i></a></td>
                                             </tr>
                                         <?php endforeach; ?>
                                     </tbody>

@@ -49,4 +49,15 @@ class Bl
         $stmt->execute();
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
+    //delete bl
+    function eliminar($id){
+        $query = "DELETE FROM ". $this->table_name. " WHERE bl_id =?";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(1, $id);
+        if($stmt->execute()){
+            return true;
+        }else{
+            return false;
+        }
+    }
 }

@@ -24,7 +24,7 @@ class Contenedor
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
     public function getContenedorById($id){
-        $query = "SELECT * FROM ". $this->table_name. " WHERE contenedor_id =? ";
+        $query = "SELECT c.*, u.nombre as usuario_id FROM ". $this->table_name. " c JOIN usuarios u ON c.usuario_id = u.usuario_id WHERE contenedor_id =? ";
         $stmt = $this->conn->prepare($query);
         $stmt->bindParam(1, $id);
         $stmt->execute();
@@ -52,6 +52,17 @@ class Contenedor
         $stmt = $this->conn->prepare($query);
         $stmt->bindParam(1, $operacion);
         $stmt->bindParam(2, $contenedor_id);
+        if($stmt->execute()){
+            return true;
+        } else{
+            return false;
+        }
+    }
+    //delete contenedor
+    public function deleteContenedor($id){
+        $query = "DELETE FROM ". $this->table_name. " WHERE contenedor_id =?";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(1, $id);
         if($stmt->execute()){
             return true;
         } else{

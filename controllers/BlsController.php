@@ -37,4 +37,12 @@ class BlsController
             }
         }
     }
+    public function eliminar(){
+        if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+            $bl_id = $_GET['id'];
+            $bl = new Bl();
+            $bl->eliminar($bl_id);
+            header('Location:?page=bls&message=bl_eliminado_correctamente');
+        }
+    }
 }

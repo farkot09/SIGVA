@@ -73,4 +73,24 @@ class ContenedoresController
         require_once 'views/operaciones/index.php';
     }
 
+    public function informes(){
+        $contenedor = new Contenedor();
+        $contenedores = $contenedor->getAllContenedores();
+        require_once 'views/informes/index.php';
+    }
+
+    public function verInforme(){
+        $id = $_GET['id'];
+        $contenedor = new Contenedor();
+        $contenedores = $contenedor->getContenedorById($id);
+        require_once 'views/informes/informe.php';
+    }
+    //delete contenedor
+    public function deleteContenedor(){
+        $id = $_GET['id'];
+        $contenedor = new Contenedor();
+        $contenedor->deleteContenedor($id);
+        header('Location:?page=contenedores&message=contenedor_eliminado_correctamente');
+    }
+
 }

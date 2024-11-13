@@ -92,8 +92,7 @@
                                                 <td><?= $contenedor['usuario_id']; ?></td>
                                                 <td><?= $contenedor['fecha_creacion']; ?></td>
                                                 <td><a href="?page=contenedores&action=infoContenedor&id=<?php echo $contenedor['contenedor_id'] ?>" type="button" class="btn btn-primary"> <i class="bi bi-eye"></i>
-                                                    </a> <button type="button" class="btn btn-danger"> <i
-                                                            class="bi bi-trash"></i> </button>
+                                                    </a> <a href="?page=contenedores&action=deleteContenedor&id=<?php echo $contenedor['contenedor_id'] ?>" type="button" class="btn btn-danger"> <i class="bi bi-trash"></i> </a>
                                                 </td>
                                             </tr>
                                         <?php endforeach; ?>
