@@ -7,7 +7,7 @@
     <title>Plantilla</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 <body>
@@ -36,7 +36,7 @@
                                     </div>
                                     <div class="mb-3">
                                         <label class="form-label">tipo_contenedor</label>
-                                        <select name="tipo_contenedor">
+                                        <select class="form-select" name="tipo_contenedor">
                                             <option value="20ft">20ft</option>
                                             <option value="40ft">40ft</option>
                                             <option value="Reefer">Reefer</option>
@@ -45,7 +45,7 @@
                                     </div>
                                     <div class="mb-3">
                                         <label class="form-label">Capacidad</label>
-                                        <select name="capacidad">
+                                        <select class="form-select" name="capacidad">
                                             <option value="Baja">Baja</option>
                                             <option value="Media">Media</option>
                                             <option value="Alta">Alta</option>

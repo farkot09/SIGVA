@@ -47,11 +47,11 @@ class Contenedor
 
     }
     //switch operacion del contenedor
-    public function switchContenedor($datos){
+    public function switchContenedor($operacion, $contenedor_id){
         $query = "UPDATE ". $this->table_name. " SET operacion =? WHERE contenedor_id =?";
         $stmt = $this->conn->prepare($query);
-        $stmt->bindParam(1, $datos['operacion']);
-        $stmt->bindParam(2, $datos['contenedor_id']);
+        $stmt->bindParam(1, $operacion);
+        $stmt->bindParam(2, $contenedor_id);
         if($stmt->execute()){
             return true;
         } else{

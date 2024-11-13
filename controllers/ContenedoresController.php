@@ -38,7 +38,7 @@ class ContenedoresController
     }
     //get contenedor by id
     public function getContenedorById($id)
-    {        
+    {
         $contenedor = new Contenedor();
         $contenedor = $contenedor->getContenedorById($id);
         return $contenedor;
@@ -53,16 +53,24 @@ class ContenedoresController
         header('Location:?page=bls');
     }
     //switch operacion del contenedor
-    public function switchOperacion(){
+    public function switchOperacion()
+    {
+        $contenedor = new Contenedor();
         $id = $_GET['id'];
-        $contenedor = $this->getContenedorById($id);
-        if($contenedor['operacion'] == 1){
-            $contenedor['operacion'] = 0;
-        }else{
-            $contenedor['operacion'] = 1;
+        $contenedores = $this->getContenedorById($id);
+        if ($contenedores['operacion'] == 1) {
+            $contenedores['operacion'] = 0;
+        } else {
+            $contenedores['operacion'] = 1;
         }
-        $contenedor->actualizarOperacion($contenedor);
-        header('Location:?page=contenedores');
+        $contenedores2 = $contenedor->switchContenedor($contenedores['operacion'], $contenedores['contenedor_id']);
+        header('Location:?page=contenedores&action=habilitarOperacion');
+    }
+    public function habilitarOperacion()
+    {
+        $contenedor = new Contenedor();
+        $contenedores = $contenedor->getAllContenedores();
+        require_once 'views/operaciones/index.php';
     }
 
 }

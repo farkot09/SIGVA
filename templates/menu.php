@@ -5,7 +5,7 @@ $datos = !empty($_SESSION['datos']) ? $_SESSION['datos'] : '';
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark custom-navbar mb-5" aria-label="Tenth navbar example">
     <div class="container-fluid">
         <div class="logo-container d-none d-lg-block">
-            <img src="/img/logo.png" alt="Logo" class="logo">
+            <img src="./img/logo.png" alt="Logo" class="logo">
         </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample08"
             aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,12 +26,8 @@ $datos = !empty($_SESSION['datos']) ? $_SESSION['datos'] : '';
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false"><i
+                    <a class="nav-link" href="?page=contenedores&action=habilitarOperacion"><i
                             class="bi bi-newspaper"></i> Operaciones</a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="/habilitarOperacion.html">Habilitar Operacion</a></li>
-                        <li><a class="dropdown-item" href="/habilitarOperacion.html">Cerrar Operacion</a></li>
-                    </ul>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false"><i

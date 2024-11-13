@@ -57,6 +57,6 @@ switch ($page) {
         }
         break;
     default:
-        echo "La página no existe.";
+        header('Location:?page=login');
         break;
 }
