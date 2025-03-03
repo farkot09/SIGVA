@@ -1,6 +1,6 @@
 <?php
 class Database {
-    private $host = "localhost";
+    private $host = "mysql"; // 👉 Usa el nombre del servicio en Docker
     private $db_name = "sigva_db";
     private $username = "root";
     private $password = "BarceloNA26.";
@@ -17,4 +17,5 @@ class Database {
         return $this->conn;
     }
 }
+
 

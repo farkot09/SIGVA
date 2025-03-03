@@ -13,14 +13,14 @@ class ContenedoresController
     public function crear()
     {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            $usuario_id = $_POST['usuario_id'];
+            $id_usuario = $_POST['id_usuario'];
             $numero_contenedor = $_POST['numero_contenedor'];
             $tipo_contenedor = $_POST['tipo_contenedor'];
             $capacidad = $_POST['capacidad'];
             $cantidad_bls = $_POST['cantidad_bls'];
             $contenedor = new Contenedor();
             $datos = array(
-                'usuario_id' => $usuario_id,
+                'id_usuario' => $id_usuario,
                 'numero_contenedor' => $numero_contenedor,
                 'tipo_contenedor' => $tipo_contenedor,
                 'capacidad' => $capacidad,

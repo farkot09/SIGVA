@@ -18,9 +18,16 @@ switch ($page) {
     case 'login':
         $usuariosController = new UsuariosController();
         if (isset($_GET['action']) && $_GET['action'] == 'login') {
-            $usuariosController->login($_POST['email'], $_POST['password']);
+            $email = $_POST['email'] ?? null;
+            $password = $_POST['password'] ?? null;
+
+            if ($email && $password) {
+                $usuariosController->login($email, $password);
+            } else {
+                echo "";
+            }
         }
-                
+
         include 'views/login.php';
         break;
     case 'usuarios':

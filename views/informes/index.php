@@ -37,7 +37,7 @@
                                     <tr>
                                         <td><?= $contenedor['contenedor_id']; ?></td>
                                         <td><?= $contenedor['numero_contenedor']; ?></td>
-                                        <td><?= $contenedor['usuario_id'] ?></td>          
+                                        <td><?= $contenedor['id_usuario'] ?></td>          
                                         <td><?= $contenedor['fecha_creacion'] ?></td>          
                                         <td><a href="?page=contenedores&action=verInforme&id=<?=$contenedor['contenedor_id']; ?>" type="button" class="btn btn-primary"> <i class="bi bi-newspaper"></i> </a></td>          
                                         <td><a type="button" class="btn btn-warning"> <i class="bi bi-file-earmark-zip"></i> </a></td>          

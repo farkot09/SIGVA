@@ -28,7 +28,7 @@
 
                                 <form method="post" action="?page=contenedores&action=crear">
                                     <div class="mb-3">
-                                        <input name="usuario_id" value="1" type="text" class="form-control" readonly>
+                                        <input name="id_usuario" value="1" type="text" class="form-control" readonly>
                                     </div>
                                     <div class="mb-3">
                                         <label class="form-label">Numero Contenedor</label>
@@ -89,7 +89,7 @@
                                                 <td><?= $contenedor['estado'] ? 'Activo' : 'Inactivo'; ?></td>
                                                 <td><?= $contenedor['operacion'] ? 'En operación' : 'No en operación'; ?>
                                                 </td>
-                                                <td><?= $contenedor['usuario_id']; ?></td>
+                                                <td><?= $contenedor['id_usuario']; ?></td>
                                                 <td><?= $contenedor['fecha_creacion']; ?></td>
                                                 <td><a href="?page=contenedores&action=infoContenedor&id=<?php echo $contenedor['contenedor_id'] ?>" type="button" class="btn btn-primary"> <i class="bi bi-eye"></i>
                                                     </a> <a href="?page=contenedores&action=deleteContenedor&id=<?php echo $contenedor['contenedor_id'] ?>" type="button" class="btn btn-danger"> <i class="bi bi-trash"></i> </a>

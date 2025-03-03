@@ -15,16 +15,16 @@ class Contenedor
     public function getAllContenedores()
     {
         $query = "
-                    SELECT c.*, u.nombre AS usuario_id
+                    SELECT c.*, u.nombre AS id_usuario
                     FROM " . $this->table_name . " c
-                    LEFT JOIN usuarios u ON c.usuario_id = u.usuario_id
+                    LEFT JOIN usuarios u ON c.id_usuario = u.id_usuario
                 ";
         $stmt = $this->conn->prepare($query);
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
     public function getContenedorById($id){
-        $query = "SELECT c.*, u.nombre as usuario_id FROM ". $this->table_name. " c JOIN usuarios u ON c.usuario_id = u.usuario_id WHERE contenedor_id =? ";
+        $query = "SELECT c.*, u.nombre as id_usuario FROM ". $this->table_name. " c JOIN usuarios u ON c.id_usuario = u.id_usuario WHERE contenedor_id =? ";
         $stmt = $this->conn->prepare($query);
         $stmt->bindParam(1, $id);
         $stmt->execute();
@@ -32,9 +32,9 @@ class Contenedor
         return $row;
     }
     public function crearContenedor($datos){
-        $query = "INSERT INTO ". $this->table_name. " SET usuario_id =?, numero_contenedor =?, tipo_contenedor =?, capacidad =?, cantidad_bls =?";
+        $query = "INSERT INTO ". $this->table_name. " SET id_usuario =?, numero_contenedor =?, tipo_contenedor =?, capacidad =?, cantidad_bls =?";
         $stmt = $this->conn->prepare($query);
-        $stmt->bindParam(1, $datos['usuario_id']);
+        $stmt->bindParam(1, $datos['id_usuario']);
         $stmt->bindParam(2, $datos['numero_contenedor']);
         $stmt->bindParam(3, $datos['tipo_contenedor']);
         $stmt->bindParam(4, $datos['capacidad']);

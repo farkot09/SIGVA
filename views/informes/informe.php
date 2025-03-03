@@ -34,7 +34,7 @@
                                     <td>CANTIDAD DE BLS : <b><?php echo $contenedores['cantidad_bls']; ?></b></td>
                                 </tr>
                                 <tr>
-                                    <td>RESPONSABLE VACIADO : <b><?php echo $contenedores['usuario_id']; ?></b></td>
+                                    <td>RESPONSABLE VACIADO : <b><?php echo $contenedores['id_usuario']; ?></b></td>
                                 </tr>
                                 <tr>
                                     <td><img  width="300" height="300" loading="lazy" src="views/informes/HLBU1218286/1.jpeg" alt="imagen1"></td>

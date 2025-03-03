@@ -54,7 +54,9 @@ class UsuariosController
             $usuario = new Usuario();
             $datos = $usuario->login($email, $password);
             if($datos){
-                session_start();
+                if (session_status() === PHP_SESSION_NONE) {
+                    session_start();
+                }                
                 $_SESSION['datos'] = $datos;
                 header("Location:?page=contenedores");
             }else{
