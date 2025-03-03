@@ -65,9 +65,13 @@ class UsuariosController
         }
     }
     public function logout(){
-        session_start();
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
         session_destroy();
-        header("Location:?page=login");
+        header("Location: index.php?page=login");
+        exit();
+        
     }
     
 }

@@ -3,7 +3,7 @@ class Database {
     private $host = "mysql"; // 👉 Usa el nombre del servicio en Docker
     private $db_name = "sigva_db";
     private $username = "root";
-    private $password = "BarceloNA26.";
+    private $password = "root";
     public $conn;
 
     public function getConnection() {

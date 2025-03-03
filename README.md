@@ -10,8 +10,9 @@ Asegúrate de tener instalados:
 ## 📦 Instalación y Configuración
 1. Clona el repositorio en tu máquina local:
    ```bash
-   git clone https://github.com/tu_usuario/tu_repositorio.git
-   cd tu_repositorio
+   mkdir SIGVA
+   git clone https://github.com/farkot09/SIGVA.git
+   cd SIGVA
    ```
 
 2. Construye y levanta los contenedores:
@@ -24,10 +25,14 @@ Asegúrate de tener instalados:
    docker ps
    ```
 
-4. Accede a **phpMyAdmin** para administrar la base de datos:
+4. Accede a **A la App** para iniciar sesion:
+   - URL: [http://localhost/?page=login&action=login](http://localhost/?page=login&action=login)
+
+
+5. Accede a **phpMyAdmin** para administrar la base de datos:
    - URL: [http://localhost:8080](http://localhost:8080)
    - Usuario: `root`
-   - Contraseña: `BarceloNA26.`
+   - Contraseña: `root`
 
 ## 📂 Estructura del Proyecto
 ```
