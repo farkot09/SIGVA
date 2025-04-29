@@ -1,4 +1,5 @@
 FROM php:8.2-apache 
+COPY . /var/www/html/
 
 # Instalar extensiones necesarias
 RUN docker-php-ext-install pdo pdo_mysql mysqli
