@@ -2,6 +2,7 @@
 require_once 'controllers/UsuariosController.php';
 require_once 'controllers/ContenedoresController.php';
 require_once 'controllers/BlsController.php';
+require_once 'controllers/OperacionController.php';
 session_start();
 
 if (!isset($_SESSION['datos'])) { 
@@ -63,6 +64,17 @@ switch ($page) {
             $blsController->index();
         }
         break;
+        case 'operaciones':
+            $operacionController = new OperacionController();
+            if (isset($_GET['action'])) {
+                $method = $_GET['action'];
+                if (method_exists("OperacionController", $method)) {
+                    $operacionController->{$method}();
+                }
+            } else {
+                $operacionController->verOperaciones();
+            }
+            break;
     default:
         header('Location:?page=login');
         break;

@@ -13,6 +13,7 @@ class BlsController
             $bls = $bl->getBlsByContenedorId($datosContenedor['contenedor_id']);
             $numeroContenedor = $datosContenedor['numero_contenedor'];
             $idContenedor = $datosContenedor['contenedor_id'];
+            $cantidadBls = $datosContenedor['cantidad_bls'];
             require_once 'views/bls/index.php';
         }else{
             header('Location: ?page=contenedores&error=error_contenedor');

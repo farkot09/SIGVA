@@ -21,14 +21,30 @@
                 <div class="col-8 mt-5">
                     <h1>Habilitar Operaciones</h1>
                     <div class="bd-example">
-                        <table class="table">
+                        <table class="table table-striped table-hover table-bordered">
                             <thead>
                                 <tr>
-                                    <th scope="col">id</th>
-                                    <th scope="col">Numero de Contenedor</th>
-                                    <th scope="col">Bls</th>
+                                    <th>
+                                        <div class="d-flex align-items-center">
+                                            <i class="bi bi-hash me-2"></i> ID
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="d-flex align-items-center">
+                                            <i class="bi bi-box-seam me-2"></i> Número
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="d-flex align-items-center">
+                                            <i class="bi bi-stack me-2"></i> Bls
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="d-flex align-items-center">
+                                            <i class="bi bi-cpu me-2"></i> Vaciado
+                                        </div>
+                                    </th>
                                     <th scope="col"> - </th>
-                                    <th scope="col">Vaciado</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -36,10 +52,22 @@
                                     <tr>
                                         <td><?= $contenedor['contenedor_id']; ?></td>
                                         <td><?= $contenedor['numero_contenedor']; ?></td>
-                                        <td><?= $contenedor['estado'] ? 'Activo' : 'Inactivo'; ?></td>
+                                        <td><span
+                                                class="<?= $contenedor['estado'] ? 'badge bg-success' : 'badge bg-danger'; ?>">
+                                                <?= $contenedor['estado'] ? 'Completos' : 'Incompletos'; ?>
+                                            </span>
+                                        </td>
+                                        <td><span
+                                                class="<?= $contenedor['operacion'] ? 'badge bg-success' : 'badge bg-warning'; ?>">
+                                                <?= $contenedor['operacion'] ? 'En operación' : 'Sin operación'; ?>
+                                            </span></td>
                                         <td><a href="?page=contenedores&action=switchOperacion&id=<?= $contenedor['contenedor_id']; ?>"
-                                                type="button" class="btn btn-<?= $contenedor['operacion'] ? 'success' : 'warning'; ?>"> <?= $contenedor['operacion'] ? 'Deshabilitar' : 'Habilitar'; ?> </a></td>
-                                        <td><?= $contenedor['operacion'] ? 'En operación' : 'No en operación'; ?>
+                                                type="button"
+                                                class="btn btn-<?= $contenedor['operacion'] ? 'success' : 'danger'; ?>
+                                                <?= $contenedor['estado'] ? '' : 'disabled'; ?>
+                                                ">
+                                                <?= $contenedor['operacion'] ? 'Deshabilitar' : 'Habilitar'; ?> </a></td>
+
                                     </tr>
                                 <?php endforeach; ?>
                             </tbody>

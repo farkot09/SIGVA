@@ -1,6 +1,11 @@
 <?php
 $datos = !empty($_SESSION['datos']) ? $_SESSION['datos'] : '';
 ?>
+<!-- CSS Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- JS Bootstrap (bundle incluye Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark custom-navbar mb-5" aria-label="Tenth navbar example">
     <div class="container-fluid">
